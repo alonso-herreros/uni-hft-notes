@@ -34,7 +34,7 @@ transmission line.
 ## Expressions of lambda
 
 $$
-λ = \frac{2π v_p}{ω} = \frac{2π v_p}{2πf} = \frac{v_p}{f} = \frac{c}{ϵ_r f}
+λ = \frac{2π v_p}{ω} = \frac{2π v_p}{2πf} = \frac{v_p}{f} = \frac{c}{\sqrt{ϵ}_r f}
 $$
 
 ## About: the reflection coefficient at different points of a lossless TL
