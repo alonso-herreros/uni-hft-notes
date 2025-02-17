@@ -42,3 +42,58 @@ $$
 * The reflection coefficient in any lossless transmission line remains constant
   in magnitude.
 * Any movement in the TL implies a rotation of $Γ(z)$ in the $|Γ_L|$ circle.
+
+## Concept of Matching
+
+* Matching in a TL: $Γ_L = \frac{Z_L-Z_0}{Z_L+Z_0}$ ⟹ Standing wave
+* Conjugate matching
+
+## Smith Chart
+
+**Definition**: A calculus chart that directly represents reflection
+coefficients rising in a transmission line in a polar pattern
+
+> "The Smith Chart is much more than a graphic representation, since all CAD
+> tools incorporate it in their representation."
+>
+> – Daniel Segovia Vargas
+
+$$
+\begin{align}
+    Γ(l) = \frac{V^- e^{-jΒl}}{V^+ e^{jβl}}
+        = Γ(0) e^{-j2βl}
+        = |Γ_L| e^{jϕ_L} e^{-j2βl}
+\end{align}
+$$
+
+Starting from the polar representation of $Γ_L$, when moving towards the
+generator (away from the load), expression (1) will have increasing values for
+l, which implies:
+
+1. The value will stay in the circle of constant radius $|Γ_L|$ (as always)
+2. The rotation will be given by $2βl$ in the **clockwise** direction.
+
+### Representing impedances
+
+If we want to represent an impedance
+
+$$
+Z(l) = Z₀ \frac{1+Γ(l)}{1-Γ(l)}
+$$
+
+In order to have a general expression, we need to **normalize** the magnitude,
+which means we must divide by the characteristic magnitude:
+
+$$
+\bar{z}_L = \frac{Z_L}{Z₀} \\
+\bar{y}_L = \frac{Y_L}{Y₀} \\
+\bar{z}(l) = \frac{1 + Γ(l)}{1 - Γ(l)}
+$$ 
+
+In order to **de-normalize**, we will multiply the normalized magnitude by the
+characteristic magnitude:
+
+$$
+Z_L = \bar{z}_L Z₀ \\
+Y_L = \bar{y}_L Y₀
+$$
