@@ -1,0 +1,64 @@
+# Problem data
+Z0 = 50Ω
+Z1 = 40Ω
+Z2 = 60Ω
+
+Vg = 10V
+f0 = 2GHz
+
+Xs = 10Ω
+Xp = 100Ω
+α  = 3.5e-3 /cm
+
+# βl = 3π/4
+# βl1 = π/2
+# βl2 = π
+
+# Prelim
+
+λ := c/f0
+β := 2π/λ
+
+l  := 3π/4β
+l1 := π/2β
+l2 := π/β
+
+γ := α + jβ
+
+# Antenna 1
+
+Γ1 := (Z1-Z0)/(Z1+Z0)
+Γ1p := Γ1 e^(-2γl1)
+Z1p := Z0 (1+Γ1p)/(1-Γ1p)
+Z1p
+
+Γ2 := (Z2-Z0)/(Z2+Z0)
+Γ2p := Γ2 e^(-2γl2)
+Z2p := Z0 (1+Γ2p)/(1-Γ2p)
+Z2p
+
+ZL := jXp || (jXs + Z1p + Z2p)
+ΓL := (ZL-Z0)/(ZL+Z0)
+# ΓL to angle
+
+Γin := ΓL e^(-2γ l)
+Zin := Z0 (1+Γin)/(1-Γin)
+# Γin to angle
+
+Pgav := 1/8 * |Vg|^2/Z0
+Pin  := Pgav * (1-|Γin|^2)
+PL   := Pgav * e^(-2αl) (1-|ΓL|^2)
+
+P1p := PL / (1+ re(Z2p)/re(Z1p))
+P2p := PL / (1+ re(Z1p)/re(Z2p))
+
+P1ppos := P1p / (1-|Γ1p|^2)
+P1pos := P1ppos * e^(-2αl1)
+P1 := P1pos (1-|Γ1|^2)
+
+P2ppos := P2p / (1-|Γ2p|^2)
+P2pos := P2ppos * e^(-2αl2)
+P2 := P2pos (1-|Γ2|^2)
+
+P1
+P2
