@@ -57,9 +57,18 @@
 
 Consider a waveguide with square cross-section of side $a$.
 
-### Question 1.a
+### Question 1.a •
 
 Compute the cutoff frequencies of its modes.
+
+> **Answer**
+>
+> $$
+> \begin{aligned}
+>     fₘₙ &= \frac{1}{2\sqrt{μϵ}} \sqrt{\frac{m²}{a²} + \frac{n²}{a²}} \\
+>         &= \frac{c₀}{2a\sqrt{ϵ_r}} \sqrt{m² + n²}
+> \end{aligned}
+> $$
 
 ### Question 1.b
 
