@@ -70,9 +70,25 @@ Compute the cutoff frequencies of its modes.
 > \end{aligned}
 > $$
 
-### Question 1.b
+### Question 1.b •
 
 Check that there are two dominant modes.
+
+> **Answer**
+>
+> We can check the frequencies of the TE10 and TE01 modes:
+>
+> $$
+> \begin{aligned}
+>     f₁₀ &= \frac{c₀}{2a\sqrt{ϵ_r}} \sqrt{1² + 0²} \\
+>         &= \frac{c₀}{2a\sqrt{ϵ_r}} \\
+>     f₀₁ &= \frac{c₀}{2a\sqrt{ϵ_r}} \sqrt{0² + 1²} \\
+>         &= \frac{c₀}{2a\sqrt{ϵ_r}} &= f₁₀ \\
+> \end{aligned}
+> $$
+>
+> Both have the same frequency, so they are both dominant (and degenerate)
+> modes.
 
 ### Question 1.c
 
